@@ -29,10 +29,17 @@ The first goal is to visualise historically the number of accidents per category
 
 The step by step procedure to the solution can be found in <a href="https://github.com/mahmoudfazeli/Munich-Monthly-Alcoholic-Accidents/blob/main/munich-monthly-alcoholic-accidents.ipynb"><b>this notebook</b></a>. Here are some important visualisations:
 
+### Data
 <img src="./images/1.PNG"/>
-![Alt text](./images/1.PNG?raw=true "DATA")
-
-
+<img src="./images/2.png"/>
+<img src="./images/3.png"/>
+<img src="./images/4.png"/>
+<img src="./images/5.png"/>
+<img src="./images/6.png"/>
+<img src="./images/7.png"/>
+<img src="./images/8.png"/>
+<img src="./images/9.png"/>
+<img src="./images/10.png"/>
 
 
 ## Description
