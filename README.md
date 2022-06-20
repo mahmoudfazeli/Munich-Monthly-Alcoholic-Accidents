@@ -29,7 +29,6 @@ The first goal is to visualise historically the number of accidents per category
 
 The step by step procedure to the solution can be found in <a href="https://github.com/mahmoudfazeli/Munich-Monthly-Alcoholic-Accidents/blob/main/munich-monthly-alcoholic-accidents.ipynb"><b>this notebook</b></a>. Here are some important visualisations:
 
-### Data
 <img src="./images/1.PNG"/>
 <img src="./images/2.png"/>
 <img src="./images/3.png"/>
@@ -42,7 +41,11 @@ The step by step procedure to the solution can be found in <a href="https://gith
 <img src="./images/10.png"/>
 
 
-## Description
+## Mission 2
+The flask app of the AI model is deployed on heroku, which can be found at:
+https://mahmoud-munich-challenge.herokuapp.com/
+
+
 This challenge for Artificial Intelligence Engineer Consists of 3 tasks.
 - Mission 1: Create a AI Model
 - Mission 2: Publish source code & Deploy
