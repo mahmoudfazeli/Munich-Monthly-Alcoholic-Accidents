@@ -43,19 +43,8 @@ The step by step procedure to the solution can be found in <a href="https://gith
 
 ## Mission 2
 The flask app of the AI model is deployed on heroku, which can be found at:
-https://mahmoud-munich-challenge.herokuapp.com/
-
-
-This challenge for Artificial Intelligence Engineer Consists of 3 tasks.
-- Mission 1: Create a AI Model
-- Mission 2: Publish source code & Deploy
-- Mission 3: Sending the URL of the task
-
-## Demo link
-View demo <a href="https://dps-ai.herokuapp.com/"><b>Here 💻</b></a>.
-Or use this API endpoint  `dps-ai.herokuapp.com/api/predict` to returns your predictions.
-#### Note
-The endpoint accepts a POST request with a JSON body like this:
+https://mahmoud-munich-challenge.herokuapp.com/ and the API endpoint is:
+https://mahmoud-fazeli-dps-challenge.herokuapp.com/api/predict. The endpoint accepts a POST request with a JSON body like this:
 ```
 {
 "year" : 2020,
@@ -67,32 +56,13 @@ It return prediction in the following format:
 {
 "prediction" : value
 }
-```
-## DataFrame
 
-Download the <a href="https://www.opengov-muenchen.de/dataset/monatszahlen-verkehrsunfaelle/resource/40094bd6-f82d-4979-949b-26c8dc00b9a7"><b>Monatszahlen Verkehrsunfälle</b></a> Dataset from the München Open Data Portal. Here you see the number of accidents for specific categories per month.
+## Packages
+The required packages are:
 
-## Packages:
+- numpy
 - pandas
-- matplotlib
+- statsmodels
 - sklearn
-- pickle
-
-## Visualization:
-visualization historically the number of accidents per category
-### Accidents Category Visualization:
-
-<img src="./images/accidents_category1.jpg"/>
-<img src="./images/accidents_category2.jpg"/>
-<img src="./images/accidents_category3.jpg"/>
-<img src="./images/accidents_category4.jpg"/>
-
-<br />
-
-### Number of accidents per category
-<img src="./images/category.jpg"/>
-
-<br />
-
-### Number of accidents per Accident Type
-<img src="./images/type.jpg"/>
+- Flask
+- gunicorn
