@@ -31,17 +31,21 @@ def predict():
 @app.route("/api/predict", methods=["POST"])
 def apiPredict():
     if "year" not in request.get_json() or "month" not in request.get_json():
-        return {"Error": "Year ans Month are required!"}, 400
+        return {"Error": "Year and Month are required!"}, 400
 
+    start_year = '2000'
+    start_month = '1'
     data = request.get_json()
-    year = data['year']
-    month = data['month']
+    end_year = str(data['year'])
+    end_month = str(data['month'])
 
-    if type(year) != int or month not in range(1, 13):
-        return {"Error": "Year ans Month must be a valid numbers!"}, 400
+    if int(end_month) not in range(1, 13):
+        return {"Error": "Month must be between 1 and 12!"}, 400
     else:
-        features = [[year - 2000, month]]
-        prediction = int(model.predict(features)[0])
+        id = (int(end_year)-int(start_year))*12+(int(end_month)-int(start_month))
+        start_index = pd.to_datetime(start_year + start_month, format="%Y%m").to_period('M')
+        end_index = pd.to_datetime(end_year + end_month, format="%Y%m").to_period('M')
+        prediction = int(model.predict(start = start_index, end = end_index)[id])
         return {'prediction': prediction}
 
 
