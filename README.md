@@ -56,6 +56,7 @@ It return prediction in the following format:
 {
 "prediction" : value
 }
+```
 
 ## Packages
 The required packages are:
