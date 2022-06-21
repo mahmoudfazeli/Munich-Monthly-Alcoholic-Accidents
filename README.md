@@ -43,8 +43,9 @@ The step by step procedure to the solution can be found in <a href="https://gith
 
 ## Mission 2
 The flask app of the AI model is deployed on heroku, which can be found at:
-https://mahmoud-munich-challenge.herokuapp.com/ and the API endpoint is:
-https://mahmoud-fazeli-dps-challenge.herokuapp.com/api/predict. The endpoint accepts a POST request with a JSON body like this:
+https://mahmoud-fazeli-dps.herokuapp.com and the API endpoint is:
+https://mahmoud-fazeli-dps.herokuapp.com/api/predict.
+The endpoint accepts a POST request with a JSON body like this:
 ```
 {
 "year" : 2020,
