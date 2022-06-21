@@ -25,7 +25,7 @@ def predict():
     prediction = int(model.predict(start = start_index, end = end_index)[id])
     return render_template(
         'index.html',
-        prediction_text='prediction value is {}'.format(prediction))
+        prediction_text='The predicted value of total alcoholic accidents on this month is: {}'.format(prediction))
 
 
 @app.route("/api/predict", methods=["POST"])
@@ -36,12 +36,14 @@ def apiPredict():
     start_year = '2000'
     start_month = '1'
     data = request.get_json()
-    end_year = str(data['year'])
-    end_month = str(data['month'])
+    end_year = data['year']
+    end_month = data['month']
 
-    if int(end_month) not in range(1, 13):
-        return {"Error": "Month must be between 1 and 12!"}, 400
+    if type(end_year) != int or end_month not in range(1, 13):
+        return {"Error": "Please insert valid numbers!"}, 400
     else:
+        end_year = str(end_year)
+        end_month = str(end_month)
         id = (int(end_year)-int(start_year))*12+(int(end_month)-int(start_month))
         start_index = pd.to_datetime(start_year + start_month, format="%Y%m").to_period('M')
         end_index = pd.to_datetime(end_year + end_month, format="%Y%m").to_period('M')
